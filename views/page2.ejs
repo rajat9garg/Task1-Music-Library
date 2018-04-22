@@ -19,21 +19,24 @@
 								<th class="column3">Years Active</th>
 								<th class="column4">Album Name</th>
 								<th class="column5">Rel. Date</th>
-								<th class="column6">Track Name</th>
+								<th class="column6">Tracks Name</th>
 								<th class="column6">playtime</th>
 							</tr>
 						</thead>
 						<tbody>
-						
+
 						<% for(var i=0; i < todos.length; i++) { %>
 						   <tr>
 							 <td><%= todos[i].name %></td>
 							 <td><%= todos[i].Description %></td>
 							 <td><%= todos[i].Years_active %></td>
-							
+							 <td><%= todos[i].aname %></td>
+							 <td><%= todos[i].release_date %></td>
+							 <td><%= todos[i].tname %></td>
+							 <td><%= todos[i].playtime %></td>
 						   </tr>
 						<% } %>
-												
+
 						</tbody>
 					</table>
 				</div>

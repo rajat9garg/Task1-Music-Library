@@ -8,24 +8,17 @@ var urlencoded = bodyparser.urlencoded({extended:false});
 var Artist = new mongoose.Schema({
   name:String,
   Description:String,
-  Years_active:String
-});
-
-var Albums = new mongoose.Schema({
+  Years_active:String,
   artist:String,
-  name:String,
-  release_date:String
-});
-
-var Tracks = new mongoose.Schema({
+  aname:String,
+  release_date:String,
   albumid:String,
-  name:String,
+  tname:String,
   playtime:String
 });
 
+
 var Artists= mongoose.model('Artists',Artist);
-var Albums= mongoose.model('Albums',Albums);
-var Tracks= mongoose.model('Tracks',Tracks);
 
 module.exports = function(app){
 
@@ -42,7 +35,6 @@ app.get('/page1',function(req,res){
 app.get('/page2',function(req,res){
   Artists.find({},function(err, data){
   if (err) throw err;
-  console.log(data);
   res.render('page2',{todos : data});
 });
 
@@ -52,25 +44,17 @@ app.post('/page1',function(req,res){
   var newTodo = Artists({
     name:req.body.artist_name,
     Description:req.body.description,
-    Years_active:req.body.years_active
-  }).save(function(err,data){
-  if (err) throw err;});
-
-  var newTodo = Albums({
+    Years_active:req.body.years_active,
     artist:req.body.artist_name,
-    name:req.body.name,
-    release_date:req.body.Date
-  }).save(function(err,data){
-  if (err) throw err;});
-
-  var newTodo = Tracks({
+    aname:req.body.name,
+    release_date:req.body.Date,
     albumid:req.body.name,
-    name:req.body.tname,
+    tname:req.body.tname,
     playtime:req.body.time
   }).save(function(err,data){
-  if (err) throw err;});
+  if (err) throw err;
 });
 
-
+});
 
 };

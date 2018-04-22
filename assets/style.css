@@ -1,0 +1,82 @@
+*
+{
+	margin: 0;
+	padding:0;
+}
+
+header
+{
+	height: 100vh;
+	background: cover;
+	background-position:center;
+}
+
+
+body
+{
+  background-color: darkblue;
+	font-family:monospace;
+}
+
+.row
+{
+	max-width:1200px;
+	margin: auto;
+}
+
+.hero
+{
+	position: absolute;
+	width: 1200px;
+	margin-top: 250px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+h1
+{
+	color: white;
+	text-transform: uppercase;
+	font-size: 50px;
+	text-align:center;
+	margin-top: 50px;
+  margin-left: 120px;
+}
+
+.button
+{
+	margin-top:25px;
+	margin-left:500px;
+}
+
+.btn
+{
+	border: 1px solid white;
+	padding:10px 30px;
+	color: white;
+	text-decoration:none;
+	margin-right: auto;
+	font-size: 13px;
+	text-transform: uppercase;
+
+}
+
+.btn-one
+{
+	background-color: purple;
+	font-family: "Roboto", sans-serif;
+
+}
+
+.btn-two
+{
+	background-color: blue;
+	font-family: "Roboto", sans-serif;
+
+}
+
+.btn-two:hover
+{
+	background-color: orange;
+	transition: all 0.5s ease-in;
+}

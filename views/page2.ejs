@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -25,15 +24,16 @@
 							</tr>
 						</thead>
 						<tbody>
-								<tr>
-									<td class="column1">this</td>
-									<td class="column2">200398</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-
+						
+						<% for(var i=0; i < todos.length; i++) { %>
+						   <tr>
+							 <td><%= todos[i].name %></td>
+							 <td><%= todos[i].Description %></td>
+							 <td><%= todos[i].Years_active %></td>
+							
+						   </tr>
+						<% } %>
+												
 						</tbody>
 					</table>
 				</div>

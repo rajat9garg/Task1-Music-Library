@@ -3,8 +3,20 @@
 <head>
 	<title>Table V01</title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<style>
+	button{
+		border:1px solid black;
+	}
+	</style>
 </head>
 <body>
 	<div class="limiter">
@@ -16,11 +28,12 @@
 							<tr class="table100-head">
 								<th class="column1">Artist Name</th>
 								<th class="column2">Description</th>
-								<th class="column3">Years Active</th>
-								<th class="column4">Album Name</th>
-								<th class="column5">Rel. Date</th>
-								<th class="column6">Tracks Name</th>
-								<th class="column6">playtime</th>
+								<th class="column3" style="text-align:left">Years Active</th>
+								<th class="column4" style="text-align:left">Album Name</th>
+								<th class="column5" style="text-align:left">Rel. Date</th>
+								<th class="column6" style="text-align:left;width:auto;">Tracks Name</th>
+								<th class="column6" style="text-align:left;width:auto;">playtime</th>
+								<th class="column6" style="text-align:left;width:auto;">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -34,6 +47,8 @@
 							 <td><%= todos[i].release_date %></td>
 							 <td><%= todos[i].tname %></td>
 							 <td><%= todos[i].playtime %></td>
+							 <td><button type="button" class="btn btn-primary btn-sm" onClick="history.go(0)"><a href='delete'>Delete</a></button>
+							 </td>
 						   </tr>
 						<% } %>
 

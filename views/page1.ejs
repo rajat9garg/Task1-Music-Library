@@ -4,6 +4,13 @@
 <title>Add data to the Libraray</title>
 <!---Including CSS----->
 <link rel="stylesheet" type="text/css" href="responsiveform.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="envelope">
@@ -34,9 +41,9 @@
 <input name="time" placeholder="5 minutes" type="text">
 
 <input id="submit" type="submit" value="Add It To Databse" onClick="history.go(0)">
-
-<input id="submit" type="onclick" value="After clicking on submit click ME!" onClick="history.go(0)">
-
+<div style="    text-align: center;">
+<button type="button" onClick="history.go(0)" class="btn btn-primary btn-lg" id="submit">After clicking on submit click ME!</button>
+</div>
 </form>
 </div>
 </body>

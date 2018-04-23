@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: OpenSans-Regular;
-  src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
 }
 
 
@@ -14,8 +14,8 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -172,6 +172,7 @@ table td.r, table th.r {
   color: #fff;
   line-height: 1.2;
   font-weight: unset;
+  margin-left: 0px
 }
 
 tbody tr:nth-child(even) {

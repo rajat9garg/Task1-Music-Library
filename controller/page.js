@@ -40,6 +40,11 @@ app.get('/page2',function(req,res){
 
 });
 
+app.get('/delete',function(req,res){
+  var removeQuery = Artists.remove({id : req.params.id });
+  removeQuery.exec();
+});
+
 app.post('/page1',function(req,res){
   var newTodo = Artists({
     name:req.body.artist_name,
